@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <link rel="icon" type="image/png" href="breka_logo_512-removebg-preview.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Breka Coffee</title>
+
+  <!-- ✅ FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/bomber-balloon" rel="stylesheet">
+
+  <!-- ✅ STYLESHEET -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- 🔄 LOADING SCREEN -->  
+  <div id="loading-screen">
+    <div class="logo-container">
+      <img class="breka-logo" src="breka_logo_512.png" alt="BREKA Logo">
+    </div>
+  </div>
+
+  <!-- 🧾 KONTEN UTAMA -->
+  <div id="main-content" class="hidden">
+
+    <section class="hero">
+      <div class="logo-wrapper">
+        <img src="breka_logo_512-removebg-preview.png" alt="Logo Breka">
+      </div>
+      <h1>BREKA COFFEE</h1>
+      <p>Rasa kopi bisa hilang dalam satu tegukan. Tapi rasa dimengerti Breka?<br>Bisa tinggal SELAMANYA!!</p>
+      <a href="https://brekacoffee.github.io/" target="_blank" class="cta-button">Talk With Breka</a>
+    </section>
+
+
+    <section class="content">
+      <div class="media fade-in">
+        <audio id="bg-music" src="musik.mp4" loop></audio>
+        <button id="play-music-button" onclick="document.getElementById('bg-music').play(); this.style.display='none';">
+          Putar Musik
+        </button>
+        <img id="foto" src="qoute.png" alt="Breka Quote" />
+        <div id="myPopup" class="popup">
+          <span class="close">&times;</span>
+          <a id="downloadLink" class="download-btn" download>Download</a>
+          <img class="popup-content" id="popupImg">
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ SCRIPT -->
+    <script src="script.js"></script>
+</body>
+
+</html>

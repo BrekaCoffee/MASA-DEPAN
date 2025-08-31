@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.cdnfonts.com/css/bomber-balloon');
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Bomber Ballon', sans-serif;
+  background: #ffffff;
+  color: #222;
+}
+
+/* 🔄 LOADING SCREEN */
+#loading-screen {
+  background-color: white;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.logo-container {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  animation: bounce 2.5s infinite ease-in-out, scaleUp 3.5s ease-out forwards;
+  transform: scale(0);
+}
+.breka-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: flash 1s infinite;
+}
+@keyframes flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+@keyframes scaleUp {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+
+.hidden {
+  display: none;
+}
+
+/* ✅ KONTEN UTAMA */
+.hero {
+  background: #55abe5;
+  color: white;
+  text-align: center;
+  padding: 80px 20px 60px;
+}
+.logo-wrapper {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 15px auto;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2)  ;
+}
+
+.logo-wrapper img {
+  width: 100px;
+  height: auto;
+}
+
+.hero h1 {
+  font-family: 'Bomber Balloon', sans-serif;
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-family: 'SourceSans', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+/* 🎯 TOMBOL MENU */
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-top: 20px;
+  background-color: #ffffff;   /* putih */
+  color: #55abe5;              /* teks biru */
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #FFD321;   /* biru saat hover */
+  color: #ffffff;              /* teks putih saat hover */
+} 
+
+.content {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+.media {
+  max-width: 90%;
+  width: 480px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+.media img {
+  width: 100%;
+  border-radius: 10px;
+}
+/* Popup background */
+    .popup {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        padding-top: 60px;
+        left: 0; top: 0;
+        width: 70%; height: 70%;
+        background-color: rgba(0,0,0,0.8);
+    }
+    /* Popup content */
+    .popup-content {
+        margin: auto;
+        display: block;
+        max-width: 50%;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+    /* Close button */
+    .close {
+        position: absolute;
+        top: 20px; right: 30px;
+        color: white;
+        font-size: 40px;
+        cursor: pointer;
+    }
+    /* Download button */
+    .download-btn {
+        position: absolute;
+        top: 20px; left: 30px;
+        background: #ff9800;
+        color: white;
+        padding: 8px 14px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    .download-btn:hover {
+        background: #e68900;
+    }
+
+/* ✨ ANIMASI FADE IN */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
